@@ -1,0 +1,46 @@
+{
+    "manifest_version": 3,
+    "name": "UnBait",
+    "version": "1.0.0",
+    "description": "Resolve clickbait article titles with a simple right-click for a concise summary",
+    "permissions": [
+      "contextMenus",
+      "tabs",
+      "storage",
+      "scripting"
+    ],
+    "host_permissions": [
+      "<all_urls>"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "web_accessible_resources": [
+      {
+        "resources": ["default_prompt.txt"],
+        "matches": ["<all_urls>"]
+      }
+    ],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"],
+        "css": ["popup.css"]
+      }
+    ],
+    "action": {
+      "default_icon": {
+        "16": "images/icon16.png",
+        "48": "images/icon48.png",
+        "128": "images/icon128.png"
+      },
+      "default_title": "UnBait",
+      "default_popup": "popup.html"
+    },
+    "options_page": "options.html",
+    "icons": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  }

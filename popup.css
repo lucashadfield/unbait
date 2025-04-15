@@ -1,0 +1,86 @@
+.unbait-popup {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    z-index: 2147483647; /* Highest possible z-index */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 12px 16px;
+    max-width: 300px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+    animation: fadeIn 0.2s ease-out;
+    cursor: pointer;
+    margin: 4px; /* Ensure popups don't overlap exactly */
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .unbait-content {
+    margin-top: 4px;
+    word-wrap: break-word;
+  }
+  
+  /* Only apply flex layout to loading popups */
+  .loading-popup .unbait-content {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Result content container */
+  .result-content {
+    width: 100%;
+    line-height: 1.5;
+  }
+  
+  .unbait-content strong {
+    font-weight: 700;
+  }
+  
+  .unbait-error {
+    color: #e53935;
+  }
+  
+  /* SVG Spinner */
+  .unbait-spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+  
+  .spinner-svg {
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* Text container */
+  .close-button-container {
+    display: flex;
+    align-items: center;
+  }
+
+  /* Close button styles */
+  .close-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8px;
+    width: 18px;
+    height: 18px;
+    font-size: 18px;
+    text-align: center;
+    cursor: pointer;
+    color: #777;
+    transition: all 0.15s ease;
+    font-weight: bold;
+  }
+  
+  .close-button:hover {
+    color: #e01d2e;
+  }

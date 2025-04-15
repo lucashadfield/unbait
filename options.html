@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UnBait Settings</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+      font-size: 14px;
+      line-height: 1.5;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      align-items: center;
+    }
+    
+    h1 img {
+      width: 28px;
+      height: 28px;
+      margin-right: 10px;
+    }
+    
+    .form-group {
+      margin-bottom: 20px;
+    }
+    
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+    
+    select, input[type="text"], input[type="password"], textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 14px;
+      box-sizing: border-box;
+    }
+    
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+    
+    button {
+      background-color: #0a2440;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 4px;
+      font-size: 14px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    
+    button:hover {
+      background-color: #15395d;
+    }
+    
+    .success-message {
+      color: #388e3c;
+      margin-top: 10px;
+      padding: 8px;
+      background-color: #e8f5e9;
+      border-radius: 4px;
+      display: none;
+    }
+    
+    .model-options {
+      display: none;
+    }
+    
+    .model-options.active {
+      display: block;
+    }
+    
+    .info-text {
+      color: #666;
+      font-size: 12px;
+      margin-top: 4px;
+    }
+    
+    .button-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+    
+    .secondary-button {
+      background-color: #f1f3f4;
+      color: #5f6368;
+      border: 1px solid #dadce0;
+    }
+    
+    .secondary-button:hover {
+      background-color: #e8eaed;
+    }
+  </style>
+</head>
+<body>
+  <h1><img src="images/icon48.png" alt="UnBait logo">UnBait Settings</h1>
+  
+  <div class="form-group">
+    <label for="provider">LLM Provider</label>
+    <select id="provider">
+      <option value="openai">OpenAI</option>
+      <option value="anthropic">Anthropic</option>
+    </select>
+  </div>
+  
+  <div class="form-group">
+    <label for="model">Model ID</label>
+    <input type="text" id="model" placeholder="Enter model ID (e.g., gpt-4o-mini, claude-3-5-haiku-20241022)">
+    <div class="info-text">Enter the exact model ID for your chosen provider</div>
+  </div>
+  
+  <div class="form-group">
+    <label for="api-key">API Key</label>
+    <input type="password" id="api-key" placeholder="Enter your API key">
+    <div class="info-text">Your API key is stored locally and is only sent to the selected provider's API.</div>
+  </div>
+  
+  <div class="form-group">
+    <label for="system-prompt">System Prompt</label>
+    <textarea id="system-prompt" placeholder="Enter the system prompt to send to the LLM"></textarea>
+    <div class="button-row">
+      <div class="info-text">This prompt tells the LLM how to process the article content.</div>
+      <button id="reset-prompt-button" class="secondary-button">Reset to Default</button>
+    </div>
+  </div>
+  
+  <button id="save-button">Save Settings</button>
+  <div id="success-message" class="success-message">Settings saved successfully!</div>
+  
+  <script src="options.js"></script>
+</body>
+</html>

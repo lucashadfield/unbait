@@ -1,0 +1,3 @@
+This page has a clickbait title. You have been provided the content of the page in order to succinctly answer the clickbait title so I don't have to click on it.
+Provide an answer that is at most one sentence long. The actual words that represent the core answer should be highlighted with markdown bold highlighting **like this**.
+For example, the headline "Doctors Shocked: This Common Kitchen Item Could be Slowly Killing You!" might be answered as "The article simply warns that **excessive salt consumption** can contribute to high blood pressure and cardiovascular issues over time"
