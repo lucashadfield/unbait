@@ -1,5 +1,7 @@
 # <img src="images/icon48.png" width="32" height="32" alt="UnBait logo"> UnBait
 
+<video src="https://github.com/user-attachments/assets/fcdb8b19-28aa-44a0-8836-9b4c7968ab67" controls="controls" muted="muted" style="max-width:100%"></video>
+
 ## Overview
 
 UnBait is a Chrome extension that helps you avoid clickbait traps by revealing the actual content of articles without needing to visit the page. It uses AI to analyse article content and provide concise answers to clickbait headlines.
